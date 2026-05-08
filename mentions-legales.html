@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Duclos Agency</title>
+  <meta name="description" content="Mentions légales de Duclos Agency, conformes à la loi luxembourgeoise du 14 août 2000 relative au commerce électronique.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Red Rose'; src: url('images/red_rose/RedRose-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+    @font-face { font-family: 'Red Rose'; src: url('images/red_rose/RedRose-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'Red Rose'; src: url('images/red_rose/RedRose-Light.ttf') format('truetype'); font-weight: 300; font-display: swap; }
+  </style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --violet:       #A73DD8;
+      --violet-fonce: #6B1F8F;
+      --violet-clair: #F3E1FA;
+      --noir:         #0A0A0A;
+      --noir-2:       #111111;
+      --blanc:        #FAFAFA;
+      --gris-texte:   #1F1F1F;
+      --gris-mid:     #555;
+      --gris-light:   #888;
+      --f-titre:      'Red Rose', serif;
+      --f-corps:      'Inter', sans-serif;
+      --r-sm:         8px;
+      --r-md:         12px;
+      --t:            0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--noir);
+      color: var(--blanc);
+      font-family: var(--f-corps);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: -50%;
+      width: 200%; height: 200%;
+      z-index: 9998;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.028;
+      animation: grain .4s steps(1) infinite;
+    }
+    @keyframes grain {
+      0%   { transform: translate(0,0); }
+      25%  { transform: translate(-3%,-4%); }
+      50%  { transform: translate(4%,2%); }
+      75%  { transform: translate(-2%,5%); }
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 500;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 3rem;
+      background: rgba(10,10,10,.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo-img { height: 42px; width: auto; display: block; border-radius: var(--r-sm); }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .78rem; font-weight: 500;
+      color: rgba(250,250,250,.5); text-decoration: none;
+      transition: color var(--t);
+    }
+    .nav-back:hover { color: var(--blanc); }
+
+    /* ── Contenu ── */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 9rem 3rem 6rem;
+    }
+
+    .page-eye {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .62rem; letter-spacing: .38em; text-transform: uppercase;
+      color: var(--violet); margin-bottom: 1.5rem;
+    }
+    .page-eye::before { content:''; width:22px; height:1px; background:var(--violet); }
+
+    h1 {
+      font-family: var(--f-titre); font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08; letter-spacing: -.022em;
+      margin-bottom: .75rem;
+    }
+
+    .page-date {
+      font-size: .78rem;
+      color: rgba(250,250,250,.35);
+      letter-spacing: .04em;
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    h2 {
+      font-family: var(--f-titre); font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--blanc);
+      margin: 2.75rem 0 1rem;
+    }
+
+    h3 {
+      font-size: .88rem; font-weight: 600;
+      color: rgba(250,250,250,.7);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin: 1.75rem 0 .6rem;
+    }
+
+    p {
+      font-size: .9rem;
+      line-height: 1.78;
+      color: rgba(250,250,250,.6);
+      margin-bottom: 1rem;
+    }
+
+    .info-block {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--r-md);
+      padding: 1.75rem 2rem;
+      margin: 1.5rem 0;
+    }
+    .info-block p { margin: 0; }
+    .info-row {
+      display: flex; gap: 1rem;
+      font-size: .88rem;
+      line-height: 1.7;
+      color: rgba(250,250,250,.55);
+      margin-bottom: .4rem;
+    }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label {
+      min-width: 160px;
+      font-weight: 500;
+      color: rgba(250,250,250,.35);
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding-top: .15rem;
+    }
+    .info-val { color: rgba(250,250,250,.72); }
+
+    a {
+      color: var(--violet-clair);
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    a:hover { color: var(--violet); }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(167,61,216,.2), transparent);
+      margin: 2.5rem 0;
+    }
+
+    .notice-box {
+      background: rgba(167,61,216,.06);
+      border: 1px solid rgba(167,61,216,.2);
+      border-radius: var(--r-md);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      font-size: .84rem;
+      line-height: 1.7;
+      color: rgba(250,250,250,.55);
+    }
+    .notice-box strong { color: var(--violet-clair); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 2.25rem 3rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .f-main { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+    .f-logo-img { height: 42px; width: auto; display: block; border-radius: var(--r-sm); }
+    .f-links { display: flex; gap: 2rem; list-style: none; }
+    .f-links a { font-size: .72rem; letter-spacing: .08em; color: rgba(250,250,250,.32); text-decoration: none; transition: color var(--t); }
+    .f-links a:hover { color: var(--blanc); }
+    .f-copy { font-size: .68rem; letter-spacing: .08em; color: rgba(250,250,250,.28); }
+
+    @media (max-width: 700px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .page-wrap { padding: 8rem 1.5rem 5rem; }
+      .info-row { flex-direction: column; gap: .2rem; }
+      .info-label { min-width: auto; }
+      footer { flex-direction: column; gap: 1.25rem; text-align: center; padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-blanc.png" alt="Duclos Agency" class="nav-logo-img" loading="lazy">
+    </a>
+    <a href="index.html" class="nav-back">← Retour au site</a>
+  </nav>
+
+  <main class="page-wrap">
+
+    <div class="page-eye">Informations légales</div>
+    <h1>Mentions légales</h1>
+    <p class="page-date">Dernière mise à jour : mai 2026</p>
+
+    <!-- 1. Éditeur -->
+    <h2>1. Éditeur du site</h2>
+    <p>Conformément à la loi luxembourgeoise du 14 août 2000 relative au commerce électronique (telle que modifiée) et à la loi du 30 mai 2005 relative aux dispositions spécifiques de protection de la personne à l'égard du traitement des données à caractère personnel dans le secteur des communications électroniques, les informations suivantes sont portées à la connaissance des utilisateurs.</p>
+
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Nom commercial</span>
+        <span class="info-val">Duclos Agency</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Forme juridique</span>
+        <span class="info-val">Indépendante / Travailleur indépendant</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Responsable</span>
+        <span class="info-val">Amandine Duclos</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Adresse</span>
+        <span class="info-val">10A Rue des Mérovingiens<br>8070 Bertrange, Luxembourg</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Email</span>
+        <span class="info-val"><a href="mailto:contact@duclosagency.com">contact@duclosagency.com</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Instagram</span>
+        <span class="info-val"><a href="https://instagram.com/duclosagency" target="_blank" rel="noopener">@duclosagency</a></span>
+      </div>
+    </div>
+
+
+    <div class="divider"></div>
+
+    <!-- 2. Hébergement -->
+    <h2>2. Hébergement du site</h2>
+    <p>Le présent site est hébergé par :</p>
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Hébergeur</span>
+        <span class="info-val">GitHub, Inc.</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Adresse</span>
+        <span class="info-val">88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Service</span>
+        <span class="info-val">GitHub Pages</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Site web</span>
+        <span class="info-val"><a href="https://github.com" target="_blank" rel="noopener">github.com</a></span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 3. Propriété intellectuelle -->
+    <h2>3. Propriété intellectuelle</h2>
+    <p>L'ensemble du contenu de ce site (textes, images, vidéos, graphismes, logo, identité visuelle) est la propriété exclusive de Duclos Agency ou de ses fournisseurs de contenu, et est protégé par les lois luxembourgeoise et internationale relatives à la propriété intellectuelle.</p>
+    <p>Toute reproduction, représentation, modification, publication, transmission ou dénaturation, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit, est interdite sans l'accord préalable écrit de Duclos Agency.</p>
+
+    <div class="divider"></div>
+
+    <!-- 4. Responsabilité -->
+    <h2>4. Limitation de responsabilité</h2>
+    <p>Duclos Agency s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, Duclos Agency ne peut garantir l'exactitude, la précision, l'exhaustivité ou l'actualité des informations mises à disposition sur ce site.</p>
+    <p>Duclos Agency décline toute responsabilité pour tout dommage résultant d'une intrusion frauduleuse d'un tiers ayant entraîné une modification des informations mises à disposition sur le site, ou d'une utilisation non conforme par les utilisateurs.</p>
+    <p>Les liens hypertextes présents sur le site peuvent renvoyer vers des sites tiers. Duclos Agency ne peut être tenu responsable du contenu de ces sites, lesquels restent sous la responsabilité exclusive de leurs éditeurs.</p>
+
+    <div class="divider"></div>
+
+    <!-- 5. Droit applicable -->
+    <h2>5. Droit applicable et juridiction compétente</h2>
+    <p>Les présentes mentions légales sont régies par le droit luxembourgeois. En cas de litige relatif à l'interprétation ou à l'exécution des présentes, et à défaut d'accord amiable, les tribunaux luxembourgeois seront seuls compétents.</p>
+    <p>Pour tout litige de consommation en ligne, vous pouvez également recourir à la plateforme européenne de règlement en ligne des litiges (RLL) accessible à l'adresse : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+
+    <div class="divider"></div>
+
+    <!-- 6. Contact -->
+    <h2>6. Contact</h2>
+    <p>Pour toute question relative aux présentes mentions légales, ou pour exercer vos droits, contactez-nous à l'adresse suivante : <a href="mailto:contact@duclosagency.com">contact@duclosagency.com</a></p>
+
+  </main>
+
+  <footer>
+    <div class="f-main">
+      <img src="images/logo-blanc.png" alt="Duclos Agency" class="f-logo-img" loading="lazy">
+      <ul class="f-links">
+        <li><a href="https://instagram.com/duclosagency" target="_blank" rel="noopener">@duclosagency</a></li>
+        <li><a href="mailto:contact@duclosagency.com">Contact</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="confidentialite.html">Confidentialité</a></li>
+      </ul>
+    </div>
+    <span class="f-copy">© 2026 Duclos Agency · Tous droits réservés</span>
+  </footer>
+
+</body>
+</html>

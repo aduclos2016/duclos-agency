@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — Duclos Agency</title>
+  <meta name="description" content="Politique de confidentialité de Duclos Agency, conforme au RGPD (Règlement UE 2016/679) et au droit luxembourgeois.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    @font-face { font-family: 'Red Rose'; src: url('images/red_rose/RedRose-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+    @font-face { font-family: 'Red Rose'; src: url('images/red_rose/RedRose-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'Red Rose'; src: url('images/red_rose/RedRose-Light.ttf') format('truetype'); font-weight: 300; font-display: swap; }
+  </style>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --violet:       #A73DD8;
+      --violet-fonce: #6B1F8F;
+      --violet-clair: #F3E1FA;
+      --noir:         #0A0A0A;
+      --noir-2:       #111111;
+      --blanc:        #FAFAFA;
+      --gris-texte:   #1F1F1F;
+      --gris-mid:     #555;
+      --gris-light:   #888;
+      --f-titre:      'Red Rose', serif;
+      --f-corps:      'Inter', sans-serif;
+      --r-sm:         8px;
+      --r-md:         12px;
+      --t:            0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--noir);
+      color: var(--blanc);
+      font-family: var(--f-corps);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: -50%;
+      width: 200%; height: 200%;
+      z-index: 9998;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.028;
+      animation: grain .4s steps(1) infinite;
+    }
+    @keyframes grain {
+      0%   { transform: translate(0,0); }
+      25%  { transform: translate(-3%,-4%); }
+      50%  { transform: translate(4%,2%); }
+      75%  { transform: translate(-2%,5%); }
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 500;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 3rem;
+      background: rgba(10,10,10,.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo-img { height: 42px; width: auto; display: block; border-radius: var(--r-sm); }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .78rem; font-weight: 500;
+      color: rgba(250,250,250,.5); text-decoration: none;
+      transition: color var(--t);
+    }
+    .nav-back:hover { color: var(--blanc); }
+
+    /* ── Contenu ── */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 9rem 3rem 6rem;
+    }
+
+    .page-eye {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-size: .62rem; letter-spacing: .38em; text-transform: uppercase;
+      color: var(--violet); margin-bottom: 1.5rem;
+    }
+    .page-eye::before { content:''; width:22px; height:1px; background:var(--violet); }
+
+    h1 {
+      font-family: var(--f-titre); font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08; letter-spacing: -.022em;
+      margin-bottom: .75rem;
+    }
+
+    .page-date {
+      font-size: .78rem;
+      color: rgba(250,250,250,.35);
+      letter-spacing: .04em;
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    h2 {
+      font-family: var(--f-titre); font-weight: 600;
+      font-size: 1.25rem;
+      color: var(--blanc);
+      margin: 2.75rem 0 1rem;
+    }
+
+    h3 {
+      font-size: .88rem; font-weight: 600;
+      color: rgba(250,250,250,.7);
+      text-transform: uppercase; letter-spacing: .08em;
+      margin: 1.75rem 0 .6rem;
+    }
+
+    p {
+      font-size: .9rem;
+      line-height: 1.78;
+      color: rgba(250,250,250,.6);
+      margin-bottom: 1rem;
+    }
+
+    ul.legal-list {
+      list-style: none;
+      margin: .75rem 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+    }
+    ul.legal-list li {
+      font-size: .88rem;
+      line-height: 1.7;
+      color: rgba(250,250,250,.55);
+      padding-left: 1.4rem;
+      position: relative;
+    }
+    ul.legal-list li::before {
+      content: '✦';
+      position: absolute; left: 0;
+      color: var(--violet); font-size: .6rem;
+      top: .35rem;
+    }
+
+    .info-block {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--r-md);
+      padding: 1.75rem 2rem;
+      margin: 1.5rem 0;
+    }
+    .info-row {
+      display: flex; gap: 1rem;
+      font-size: .88rem;
+      line-height: 1.7;
+      color: rgba(250,250,250,.55);
+      margin-bottom: .4rem;
+    }
+    .info-row:last-child { margin-bottom: 0; }
+    .info-label {
+      min-width: 160px;
+      font-weight: 500;
+      color: rgba(250,250,250,.35);
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding-top: .15rem;
+      flex-shrink: 0;
+    }
+    .info-val { color: rgba(250,250,250,.72); }
+
+    /* Table des droits */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .right-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: var(--r-md);
+      padding: 1.25rem 1.5rem;
+    }
+    .right-card h3 {
+      font-size: .8rem; margin: 0 0 .4rem;
+      letter-spacing: .06em;
+    }
+    .right-card p {
+      font-size: .8rem; margin: 0;
+      color: rgba(250,250,250,.45);
+    }
+
+    a {
+      color: var(--violet-clair);
+      text-decoration: none;
+      transition: color var(--t);
+    }
+    a:hover { color: var(--violet); }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(167,61,216,.2), transparent);
+      margin: 2.5rem 0;
+    }
+
+    .notice-box {
+      background: rgba(167,61,216,.06);
+      border: 1px solid rgba(167,61,216,.2);
+      border-radius: var(--r-md);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      font-size: .84rem;
+      line-height: 1.7;
+      color: rgba(250,250,250,.55);
+    }
+    .notice-box strong { color: var(--violet-clair); }
+
+    .toc {
+      background: rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--r-md);
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+    .toc-title {
+      font-size: .72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(250,250,250,.35); margin-bottom: 1rem;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: flex; flex-direction: column; gap: .4rem;
+    }
+    .toc ol li { counter-increment: toc; }
+    .toc ol li a {
+      font-size: .84rem;
+      color: rgba(250,250,250,.45);
+      display: flex; gap: .75rem; align-items: baseline;
+    }
+    .toc ol li a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: .7rem;
+      color: rgba(167,61,216,.6);
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .toc ol li a:hover { color: rgba(250,250,250,.8); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 2.25rem 3rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1.5rem;
+    }
+    .f-main { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+    .f-logo-img { height: 42px; width: auto; display: block; border-radius: var(--r-sm); }
+    .f-links { display: flex; gap: 2rem; list-style: none; }
+    .f-links a { font-size: .72rem; letter-spacing: .08em; color: rgba(250,250,250,.32); text-decoration: none; transition: color var(--t); }
+    .f-links a:hover { color: var(--blanc); }
+    .f-copy { font-size: .68rem; letter-spacing: .08em; color: rgba(250,250,250,.28); }
+
+    @media (max-width: 700px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .page-wrap { padding: 8rem 1.5rem 5rem; }
+      .rights-grid { grid-template-columns: 1fr; }
+      .info-row { flex-direction: column; gap: .2rem; }
+      .info-label { min-width: auto; }
+      footer { flex-direction: column; gap: 1.25rem; text-align: center; padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-blanc.png" alt="Duclos Agency" class="nav-logo-img" loading="lazy">
+    </a>
+    <a href="index.html" class="nav-back">← Retour au site</a>
+  </nav>
+
+  <main class="page-wrap">
+
+    <div class="page-eye">RGPD · Droit luxembourgeois</div>
+    <h1>Politique de confidentialité</h1>
+    <p class="page-date">Dernière mise à jour : mai 2026 · Applicable depuis le 25 mai 2018 (entrée en vigueur du RGPD)</p>
+
+    <!-- Table des matières -->
+    <nav class="toc" aria-label="Table des matières">
+      <div class="toc-title">Sommaire</div>
+      <ol>
+        <li><a href="#responsable">Responsable du traitement</a></li>
+        <li><a href="#donnees">Données collectées</a></li>
+        <li><a href="#finalites">Finalités et bases légales</a></li>
+        <li><a href="#conservation">Durée de conservation</a></li>
+        <li><a href="#destinataires">Destinataires des données</a></li>
+        <li><a href="#transferts">Transferts hors UE</a></li>
+        <li><a href="#droits">Vos droits</a></li>
+        <li><a href="#cookies">Cookies et traceurs</a></li>
+        <li><a href="#mineurs">Mineurs</a></li>
+        <li><a href="#modifications">Modifications</a></li>
+        <li><a href="#contact">Contact et réclamations</a></li>
+      </ol>
+    </nav>
+
+    <p>La présente politique de confidentialité décrit la manière dont Duclos Agency collecte, utilise et protège les données à caractère personnel des utilisateurs du site <strong>duclosagency.lu</strong>, conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 (RGPD) et à la loi luxembourgeoise du 1er août 2018 portant organisation de la Commission nationale pour la protection des données.</p>
+
+    <div class="divider"></div>
+
+    <!-- 1 -->
+    <h2 id="responsable">1. Responsable du traitement</h2>
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Responsable</span>
+        <span class="info-val">Amandine Duclos — Duclos Agency</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Adresse</span>
+        <span class="info-val">10A Rue des Mérovingiens, 8070 Bertrange, Luxembourg</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Email</span>
+        <span class="info-val"><a href="mailto:contact@duclosagency.lu">contact@duclosagency.lu</a></span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 2 -->
+    <h2 id="donnees">2. Données collectées</h2>
+    <p>Duclos Agency collecte uniquement les données strictement nécessaires à la fourniture de ses services. Ces données sont collectées directement auprès de vous, via le formulaire de candidature présent sur le site.</p>
+
+    <h3>Données collectées via le formulaire de candidature</h3>
+    <ul class="legal-list">
+      <li>Prénom</li>
+      <li>Adresse email</li>
+      <li>Nom de compte Instagram</li>
+      <li>Taille de l'audience (tranche sélectionnée)</li>
+      <li>Type de produit digital</li>
+      <li>Objectif principal (champ libre)</li>
+    </ul>
+
+    <h3>Données collectées automatiquement</h3>
+    <p>Lors de votre navigation sur le site, certaines données techniques peuvent être collectées automatiquement par l'hébergeur (GitHub Pages), notamment : adresse IP, type de navigateur, pages visitées, date et heure de connexion. Duclos Agency n'a pas accès direct à ces données de navigation.</p>
+
+    <div class="divider"></div>
+
+    <!-- 3 -->
+    <h2 id="finalites">3. Finalités et bases légales du traitement</h2>
+
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Finalité</span>
+        <span class="info-val">Traitement des candidatures et prise de contact</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Base légale</span>
+        <span class="info-val">Exécution de mesures précontractuelles prises à la demande de la personne concernée (Art. 6.1.b RGPD)</span>
+      </div>
+      <div class="info-row" style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,.05); padding-top: 1rem;">
+        <span class="info-label">Finalité</span>
+        <span class="info-val">Gestion de la relation commerciale (suivi, relance)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Base légale</span>
+        <span class="info-val">Intérêt légitime de Duclos Agency (Art. 6.1.f RGPD)</span>
+      </div>
+    </div>
+
+    <p>Duclos Agency ne traite vos données personnelles qu'aux fins décrites ci-dessus. Aucune donnée n'est vendue, louée ou cédée à des tiers à des fins commerciales.</p>
+
+    <div class="divider"></div>
+
+    <!-- 4 -->
+    <h2 id="conservation">4. Durée de conservation</h2>
+    <p>Vos données personnelles sont conservées uniquement pour la durée nécessaire aux finalités pour lesquelles elles ont été collectées :</p>
+    <ul class="legal-list">
+      <li><strong style="color: rgba(250,250,250,.75);">Candidatures non retenues :</strong> 6 mois à compter de la réception, puis suppression définitive.</li>
+      <li><strong style="color: rgba(250,250,250,.75);">Candidatures retenues et relation commerciale en cours :</strong> durée de la relation contractuelle + 5 ans (prescription civile luxembourgeoise).</li>
+      <li><strong style="color: rgba(250,250,250,.75);">Données de facturation :</strong> 10 ans (obligation légale comptable au Luxembourg).</li>
+    </ul>
+    <p>À l'expiration de ces délais, les données sont supprimées de manière sécurisée ou anonymisées.</p>
+
+    <div class="divider"></div>
+
+    <!-- 5 -->
+    <h2 id="destinataires">5. Destinataires des données</h2>
+    <p>Vos données peuvent être transmises aux prestataires techniques suivants, dans le cadre strict de la fourniture de leurs services :</p>
+
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Formspree, Inc.</span>
+        <span class="info-val">Réception et transmission des formulaires de candidature — Politique de confidentialité disponible sur <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">formspree.io</a></span>
+      </div>
+      <div class="info-row" style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,.05); padding-top: 1rem;">
+        <span class="info-label">GitHub, Inc.</span>
+        <span class="info-val">Hébergement du site web — Politique de confidentialité disponible sur <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">github.com</a></span>
+      </div>
+    </div>
+
+    <p>Ces prestataires agissent en qualité de sous-traitants au sens du RGPD et sont contractuellement tenus de protéger vos données avec un niveau de sécurité adéquat.</p>
+
+    <div class="divider"></div>
+
+    <!-- 6 -->
+    <h2 id="transferts">6. Transferts de données hors Union européenne</h2>
+    <p>Les prestataires Formspree et GitHub sont des entreprises établies aux États-Unis. Ces transferts sont encadrés par des garanties appropriées conformément au RGPD (clauses contractuelles types adoptées par la Commission européenne, ou décision d'adéquation applicable). Vous pouvez obtenir copie de ces garanties en nous contactant à <a href="mailto:contact@duclosagency.lu">contact@duclosagency.lu</a>.</p>
+
+    <div class="divider"></div>
+
+    <!-- 7 -->
+    <h2 id="droits">7. Vos droits</h2>
+    <p>Conformément au RGPD (Articles 15 à 22), vous disposez des droits suivants concernant vos données personnelles :</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <h3>Droit d'accès</h3>
+        <p>Obtenir une copie des données vous concernant que nous détenons.</p>
+      </div>
+      <div class="right-card">
+        <h3>Droit de rectification</h3>
+        <p>Faire corriger des données inexactes ou incomplètes.</p>
+      </div>
+      <div class="right-card">
+        <h3>Droit à l'effacement</h3>
+        <p>Demander la suppression de vos données (« droit à l'oubli »), sous réserve des obligations légales.</p>
+      </div>
+      <div class="right-card">
+        <h3>Droit à la limitation</h3>
+        <p>Demander la suspension temporaire du traitement de vos données.</p>
+      </div>
+      <div class="right-card">
+        <h3>Droit à la portabilité</h3>
+        <p>Recevoir vos données dans un format structuré et lisible par machine.</p>
+      </div>
+      <div class="right-card">
+        <h3>Droit d'opposition</h3>
+        <p>Vous opposer au traitement fondé sur l'intérêt légitime ou à des fins de prospection.</p>
+      </div>
+    </div>
+
+    <p>Pour exercer l'un de ces droits, envoyez votre demande par email à <a href="mailto:contact@duclosagency.lu">contact@duclosagency.lu</a> en précisant votre identité. Nous nous engageons à répondre dans un délai maximum d'un mois (Art. 12 RGPD), délai pouvant être prorogé de deux mois supplémentaires en cas de demande complexe.</p>
+
+    <div class="notice-box">
+      <strong>Réclamation :</strong> Si vous estimez que vos droits ne sont pas respectés, vous avez le droit d'introduire une réclamation auprès de la <strong>Commission Nationale pour la Protection des Données (CNPD)</strong>, autorité de contrôle luxembourgeoise compétente en matière de protection des données personnelles.<br><br>
+      CNPD — 15, Boulevard du Jazz, L-4370 Belvaux · <a href="https://cnpd.public.lu" target="_blank" rel="noopener">cnpd.public.lu</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 8 -->
+    <h2 id="cookies">8. Cookies et traceurs</h2>
+    <p>Le site duclosagency.lu est un site vitrine statique qui <strong style="color: rgba(250,250,250,.75);">n'utilise pas de cookies propriétaires</strong> à des fins de suivi ou d'analyse.</p>
+    <p>Toutefois, le chargement de polices de caractères via Google Fonts (Google LLC) peut générer des cookies ou des connexions vers des serveurs de Google. Nous avons mis en place des directives de préconnexion pour limiter ces échanges. Google LLC est soumise au cadre de protection des données EU-États-Unis.</p>
+    <p>Aucun outil de mesure d'audience (Google Analytics, Meta Pixel, etc.) n'est actuellement déployé sur ce site.</p>
+
+    <div class="divider"></div>
+
+    <!-- 9 -->
+    <h2 id="mineurs">9. Protection des mineurs</h2>
+    <p>Ce site et les services de Duclos Agency sont destinés à des professionnels majeurs. Nous ne collectons pas sciemment de données relatives à des personnes de moins de 16 ans. Si vous avez connaissance qu'un mineur nous a transmis des données personnelles, contactez-nous afin que nous procédions à leur suppression.</p>
+
+    <div class="divider"></div>
+
+    <!-- 10 -->
+    <h2 id="modifications">10. Modifications de la politique de confidentialité</h2>
+    <p>Duclos Agency se réserve le droit de modifier la présente politique de confidentialité à tout moment, notamment pour se conformer à toute évolution législative, réglementaire ou technique. La date de la dernière mise à jour est indiquée en haut de ce document. Nous vous invitons à consulter régulièrement cette page.</p>
+    <p>En cas de modification substantielle affectant vos droits, nous vous en informerons par email si nous disposons de votre adresse.</p>
+
+    <div class="divider"></div>
+
+    <!-- 11 -->
+    <h2 id="contact">11. Contact et réclamations</h2>
+    <p>Pour toute question relative à la présente politique ou pour exercer vos droits :</p>
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">Email</span>
+        <span class="info-val"><a href="mailto:contact@duclosagency.lu">contact@duclosagency.lu</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Objet</span>
+        <span class="info-val">Préciser « Demande RGPD – [votre droit] »</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Délai de réponse</span>
+        <span class="info-val">1 mois (Art. 12 RGPD)</span>
+      </div>
+    </div>
+
+    <p>Si votre demande reste sans réponse ou si vous n'êtes pas satisfait de la réponse apportée, vous pouvez saisir la CNPD :</p>
+    <div class="info-block">
+      <div class="info-row">
+        <span class="info-label">CNPD</span>
+        <span class="info-val">Commission Nationale pour la Protection des Données</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Adresse</span>
+        <span class="info-val">15, Boulevard du Jazz, L-4370 Belvaux, Luxembourg</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Site web</span>
+        <span class="info-val"><a href="https://cnpd.public.lu" target="_blank" rel="noopener">cnpd.public.lu</a></span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="f-main">
+      <img src="images/logo-blanc.png" alt="Duclos Agency" class="f-logo-img" loading="lazy">
+      <ul class="f-links">
+        <li><a href="https://instagram.com/duclosagency" target="_blank" rel="noopener">@duclosagency</a></li>
+        <li><a href="mailto:contact@duclosagency.lu">Contact</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="confidentialite.html">Confidentialité</a></li>
+      </ul>
+    </div>
+    <span class="f-copy">© 2026 Duclos Agency · Tous droits réservés</span>
+  </footer>
+
+</body>
+</html>

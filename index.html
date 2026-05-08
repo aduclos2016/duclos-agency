@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duclos Agency — Transforme ton audience en chiffre d'affaires</title>
   <meta name="description" content="Duclos Agency transforme l'audience des infopreneurs et influenceurs en chiffre d'affaires via des lives et webinaires de vente. 100% à la performance.">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon-180.png">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://duclosagency.lu/">
+  <meta property="og:title" content="Duclos Agency — Transforme ton audience en chiffre d'affaires">
+  <meta property="og:description" content="Lives et webinaires de vente. Modèle 100% à la performance : tu paies uniquement sur les ventes générées.">
+  <meta property="og:image" content="https://duclosagency.lu/images/og-image.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Duclos Agency — Transforme ton audience en chiffre d'affaires">
+  <meta name="twitter:description" content="Lives et webinaires de vente. 0 risque pour toi. 100% engagement pour nous.">
+  <meta name="twitter:image" content="https://duclosagency.lu/images/og-image.jpg">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://duclosagency.lu/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     @font-face { font-family: 'Red Rose'; src: url('images/red_rose/RedRose-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
@@ -40,7 +59,14 @@
       font-size: 17px;
       line-height: 1.65;
       overflow-x: hidden;
-      cursor: none;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      body { cursor: none; }
+      .faq-q, .btn-submit, .btn-primary { cursor: none; }
+    }
+    @media (hover: none) {
+      .cursor, .cursor-ring { display: none !important; }
     }
 
     /* ── Grain ── */
@@ -170,8 +196,8 @@
 
     .hero-sub {
       font-size: 1.05rem; line-height: 1.65;
-      color: rgba(250,250,250,.65);
-      max-width: 500px; margin: 1.75rem auto 2.5rem;
+      color: rgba(250,250,250,.78);
+      max-width: 520px; margin: 1.75rem auto 2.5rem;
       opacity: 0; transform: translateY(16px);
       animation: fadeUp .8s ease forwards .9s;
     }
@@ -202,7 +228,7 @@
       font-family: var(--f-corps); font-weight: 600;
       font-size: .9rem; letter-spacing: .02em;
       padding: .95rem 2.1rem; border-radius: var(--r-md);
-      border: none; cursor: none; text-decoration: none;
+      border: none; text-decoration: none;
       transition: background var(--t), box-shadow var(--t), transform var(--t);
     }
     .btn-primary:hover {
@@ -282,7 +308,7 @@
     .step:last-child { border-right: none; }
     .step-n {
       font-family: var(--f-titre); font-size: 3rem; font-weight: 700;
-      color: rgba(167,61,216,.18); line-height: 1; margin-bottom: 2rem;
+      color: rgba(167,61,216,.45); line-height: 1; margin-bottom: 2rem;
     }
     .step-name {
       font-family: var(--f-titre); font-size: 1.3rem; font-weight: 600;
@@ -353,7 +379,7 @@
     .faq-item { border-bottom: 1px solid rgba(255,255,255,.06); }
     .faq-q {
       display: flex; justify-content: space-between; align-items: center; gap: 2rem;
-      padding: 1.7rem 0; cursor: none;
+      padding: 1.7rem 0;
       font-family: var(--f-corps); font-size: .98rem; font-weight: 500;
       color: var(--blanc); background: none; border: none; width: 100%; text-align: left;
       transition: color var(--t);
@@ -419,7 +445,7 @@
       font-family: var(--f-corps); font-weight: 600;
       font-size: .9rem; letter-spacing: .02em;
       padding: 1.05rem 2rem; border-radius: var(--r-md);
-      border: none; cursor: none; width: 100%;
+      border: none; width: 100%;
       transition: background var(--t), box-shadow var(--t), transform var(--t);
       margin-top: .35rem;
     }
@@ -440,7 +466,9 @@
       border-top: 1px solid rgba(255,255,255,.06);
       padding: 2.25rem 3rem;
       display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1.5rem;
     }
+    .f-main { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
     .f-logo-img { height: 42px; width: auto; display: block; border-radius: var(--r-sm); }
     .f-links { display: flex; gap: 2rem; list-style: none; }
     .f-links a { font-size: .72rem; letter-spacing: .08em; color: rgba(250,250,250,.32); text-decoration: none; transition: color var(--t); }
@@ -454,6 +482,89 @@
     /* ══════════ DIVIDER ══════════ */
     .divider { height: 1px; max-width: 1180px; margin: 0 auto; background: linear-gradient(90deg, transparent, rgba(167,61,216,.25), transparent); }
 
+    /* ══════════ FONDATRICE ══════════ */
+    .founder-layout {
+      display: grid; grid-template-columns: 5fr 7fr;
+      gap: 6rem; align-items: start;
+    }
+    .founder-img-wrap {
+      position: relative;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      line-height: 0;
+      aspect-ratio: 4/5;
+    }
+    .founder-img-wrap::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 35%;
+      background: linear-gradient(to top,
+        rgba(10,10,10,.9) 0%,
+        rgba(10,10,10,.5) 50%,
+        transparent 100%);
+      pointer-events: none;
+    }
+    .founder-img-wrap::before {
+      content: '';
+      position: absolute; bottom: 0; right: 0;
+      width: 30%; height: 30%;
+      background: linear-gradient(135deg,
+        transparent 0%,
+        rgba(10,10,10,.85) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .founder-img {
+      width: 100%; height: 100%; display: block;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+    .founder-txt {
+      font-size: .92rem; line-height: 1.8;
+      color: rgba(250,250,250,.6);
+      margin-bottom: 1.15rem;
+    }
+    .founder-sig {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+      display: flex; flex-direction: column; gap: .35rem;
+    }
+    .sig-name {
+      font-family: var(--f-titre); font-size: 1.6rem; font-weight: 700;
+      color: var(--blanc);
+    }
+    .sig-role {
+      font-size: .72rem; color: rgba(250,250,250,.32);
+      letter-spacing: .06em;
+    }
+
+    /* ══════════ MODÈLE — photo ══════════ */
+    .perf-img-wrap {
+      margin-top: 2.5rem;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.06);
+      line-height: 0;
+      position: relative;
+      aspect-ratio: 4/5;
+    }
+    .perf-img-wrap::after {
+      content: '';
+      position: absolute; bottom: 0; right: 0;
+      width: 35%; height: 35%;
+      background: linear-gradient(135deg,
+        transparent 0%,
+        rgba(10,10,10,.9) 100%);
+      pointer-events: none;
+    }
+    .perf-img {
+      width: 100%; height: 100%; display: block;
+      object-fit: cover;
+      object-position: center bottom;
+      filter: brightness(.88) contrast(1.02);
+    }
+
     /* ══════════ RESPONSIVE ══════════ */
     @media (max-width: 900px) {
       nav { padding: 1.25rem 1.5rem; }
@@ -464,6 +575,7 @@
       .step { border-right: none; border-bottom: 1px solid rgba(255,255,255,.06); padding: 2.5rem 0; }
       .step:nth-child(2) { border-right: none; }
       .perf-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .founder-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .temo-grid { grid-template-columns: 1fr; }
       .cta-layout { grid-template-columns: 1fr; gap: 3rem; }
       .form-row-2 { grid-template-columns: 1fr; }
@@ -471,9 +583,60 @@
     }
     @media (max-width: 500px) {
       .steps { grid-template-columns: 1fr; }
-      .hero-title { font-size: 2.5rem; }
+      .hero-title { font-size: 2.2rem; }
+      .hero { padding: 7rem 1.5rem 5rem; }
+      .hero-sub { font-size: .9rem; }
+      .hero-note {
+        font-size: .65rem;
+        letter-spacing: .02em;
+        line-height: 1.6;
+        max-width: 260px;
+        text-align: center;
+      }
+      .hero-scroll { display: none; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Duclos Agency",
+    "url": "https://duclosagency.lu",
+    "logo": "https://duclosagency.lu/images/logo-blanc.png",
+    "description": "Agence spécialisée en lives et webinaires de vente pour infopreneurs et influenceurs. Modèle 100% à la performance.",
+    "founder": {
+      "@type": "Person",
+      "name": "Amandine Duclos"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10A Rue des Mérovingiens",
+      "postalCode": "8070",
+      "addressLocality": "Bertrange",
+      "addressCountry": "LU"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@duclosagency.com",
+      "contactType": "customer service",
+      "availableLanguage": "French"
+    },
+    "sameAs": [
+      "https://www.instagram.com/duclosagency"
+    ],
+    "areaServed": {
+      "@type": "GeoCircle",
+      "description": "Europe francophone"
+    },
+    "knowsAbout": [
+      "Live selling",
+      "Webinaire de vente",
+      "Marketing à la performance",
+      "Infopreneurs",
+      "Formation en ligne"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -489,13 +652,14 @@
       <li><a href="#pour-qui">Pour qui ?</a></li>
       <li><a href="#processus">Comment ça marche</a></li>
       <li><a href="#modele">Le modèle</a></li>
+      <li><a href="#fondatrice">La fondatrice</a></li>
       <li><a href="#candidature" class="nav-cta">Réserver mon appel</a></li>
     </ul>
   </nav>
 
   <!-- ════════════ HERO ════════════ -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
+    <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
       <source src="images/kling_20260505_%E4%BD%9C%E5%93%81_Cinematic__4826_0.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -506,7 +670,7 @@
         <span class="line">Transforme ton audience</span>
         <span class="line">en chiffre d'affaires.</span>
       </h1>
-      <p class="hero-sub">On pilote tes lives et webinaires de vente — stratégie, script, animation. Tu ne paies que si ça vend.</p>
+      <p class="hero-sub">Lives et webinaires qui transforment ton audience en clients. Stratégie, script, animation : on gère tout. Tu paies uniquement sur les ventes générées.</p>
       <div class="hero-actions">
         <a href="#candidature" class="btn-primary">
           Réserver mon appel découverte <span class="btn-arrow">→</span>
@@ -537,7 +701,7 @@
         <div class="crit-card reveal">
           <div class="crit-num">01</div>
           <div class="crit-label">produit digital existant</div>
-          <p class="crit-desc">Formation, coaching, programme... Tu as déjà quelque chose à vendre. On n'est pas là pour créer le produit — on est là pour le vendre.</p>
+          <p class="crit-desc">Formation, coaching, programme... Tu as déjà quelque chose à vendre. On n'est pas là pour créer le produit. On est là pour le vendre.</p>
         </div>
         <div class="crit-card reveal">
           <div class="crit-num">↑</div>
@@ -547,7 +711,7 @@
       </div>
 
       <p class="crit-note reveal">
-        Si tu n'as pas encore d'audience ou de produit, ce n'est pas pour toi — encore.<br>Reviens quand tu seras prêt·e. ✨
+        Si tu n'as pas encore d'audience ou de produit, ce n'est pas pour toi. Pas encore.<br>Reviens quand tu seras prêt·e. ✨
       </p>
     </div>
   </section>
@@ -561,25 +725,28 @@
       <div class="steps">
         <div class="step reveal">
           <div class="step-n">01</div>
-          <h3 class="step-name">Audit</h3>
-          <p class="step-desc">On plonge dans ton audience, ton offre et ton positionnement pour identifier les meilleures opportunités de conversion.</p>
+          <h3 class="step-name">Diagnostic</h3>
+          <p class="step-desc">On analyse ton audience, ton offre et tes ventes passées pour repérer où se cache ton chiffre d'affaires non exploité.</p>
         </div>
         <div class="step reveal">
           <div class="step-n">02</div>
           <h3 class="step-name">Stratégie</h3>
-          <p class="step-desc">On construit le script, la structure et le timing parfait pour ton live ou webinaire. Chaque mot est pensé pour convertir.</p>
+          <p class="step-desc">On construit le script, la structure et le timing parfait pour ton live. Chaque mot est pensé pour convertir, sans tomber dans la vente agressive.</p>
         </div>
         <div class="step reveal">
           <div class="step-n">03</div>
           <h3 class="step-name">Live</h3>
-          <p class="step-desc">Toi tu es face à ton audience. On a tout cadré en amont pour que tu n'aies plus qu'à te concentrer sur l'essentiel : vendre.</p>
+          <p class="step-desc">Toi tu es face à ton audience. On a tout cadré en amont pour que tu n'aies plus qu'à te concentrer sur l'essentiel : vendre avec authenticité.</p>
         </div>
         <div class="step reveal">
           <div class="step-n">04</div>
           <h3 class="step-name">Optimisation</h3>
-          <p class="step-desc">Après chaque session, on analyse les données et on itère. Chaque live est meilleur que le précédent.</p>
+          <p class="step-desc">On analyse chaque live, on itère, on améliore. Comme on est payés à la performance, ton ROI est notre obsession.</p>
         </div>
       </div>
+      <p class="crit-note reveal" style="margin-top: 3rem;">
+        Du diagnostic au live : 2 à 3 semaines. Tu signes uniquement si on est alignés. ✨
+      </p>
     </div>
   </section>
 
@@ -592,10 +759,12 @@
           <h2 class="s-h2">Ton risque = zéro.</h2>
           <p class="s-desc">On est payés uniquement si on génère des ventes. Pas de résultats, pas de facture.</p>
           <ul class="perf-pts">
-            <li>Aucun frais fixe. Aucune avance. Aucun risque financier.</li>
-            <li>On est 100% alignés sur ton résultat — pas sur une prestation.</li>
+            <li>On est 100% alignés sur ton résultat, pas sur une prestation.</li>
             <li>Transparence totale : tu sais exactement ce qu'on génère et ce qu'on touche.</li>
           </ul>
+          <div class="perf-img-wrap">
+            <img src="images/PHOTO AMANDINE DEVANT PC CROISSANCE DUCLOS AGENCY.jpg" alt="Analyse de performance Duclos Agency" class="perf-img" loading="lazy">
+          </div>
         </div>
 
         <div class="perf-card reveal">
@@ -603,10 +772,6 @@
           <div class="cmp-rows">
             <div class="cmp-row yes">
               <span>Paiement à la performance</span>
-              <span class="cmp-icon">✓</span>
-            </div>
-            <div class="cmp-row yes">
-              <span>Aucun frais fixe, aucune avance</span>
               <span class="cmp-icon">✓</span>
             </div>
             <div class="cmp-row yes">
@@ -636,17 +801,17 @@
 
       <div class="faq-list">
         <div class="faq-item reveal">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false">
             Et si mon live ne convertit pas ?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-ans">
-            <p>On ne te facture rien. Notre modèle 100% à la performance signifie qu'on partage le risque avec toi. Si le live ne génère pas de ventes, on n'est pas rémunérés — et on revient avec une meilleure stratégie pour la prochaine fois.</p>
+            <p>On ne te facture rien. Notre modèle 100% à la performance signifie qu'on partage le risque avec toi. Si le live ne génère pas de ventes, on n'est pas rémunérés. On revient avec une meilleure stratégie pour la prochaine fois.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false">
             Quelles niches acceptez-vous ?
             <span class="faq-icon">+</span>
           </button>
@@ -656,24 +821,49 @@
         </div>
 
         <div class="faq-item reveal">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false">
             Combien de temps prend la mise en place ?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-ans">
-            <p>Entre l'appel découverte et ton premier live, compte généralement 1 à 3 semaines. L'audit, la stratégie et le script sont bouclés rapidement — on n'aime pas traîner.</p>
+            <p>Entre l'appel découverte et ton premier live, compte généralement 1 à 3 semaines. L'audit, la stratégie et le script sont bouclés rapidement. On n'aime pas traîner.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
-          <button class="faq-q">
+          <button class="faq-q" aria-expanded="false">
             Puis-je travailler avec vous si j'ai moins de 20k abonnés ?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-ans">
-            <p>Pas pour l'instant. Le modèle à la performance nécessite un volume d'audience minimum pour être rentable des deux côtés. Reviens quand tu atteins ce cap — ou suis-nous sur Instagram pour ne pas rater l'évolution de notre offre.</p>
+            <p>Pas pour l'instant. Le modèle à la performance nécessite un volume d'audience minimum pour être rentable des deux côtés. Reviens quand tu atteins ce cap, ou suis-nous sur Instagram pour ne pas rater l'évolution de notre offre.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FONDATRICE ════════════ -->
+  <section class="s-dark2" id="fondatrice">
+    <div class="s-wrap">
+      <div class="founder-layout">
+
+        <div class="founder-img-wrap reveal">
+          <img src="images/PHOTO AMANDINE NUIT LUXEMBOURG.jpg" alt="Amandine Duclos, fondatrice de Duclos Agency" class="founder-img" loading="lazy">
+        </div>
+
+        <div class="reveal">
+          <div class="s-eye">La fondatrice</div>
+          <h2 class="s-h2">Amandine<br>Duclos.</h2>
+          <p class="founder-txt">Le marché francophone regorge de créateurs avec une vraie audience, un vrai produit, et des ventes qui stagnent. Non par manque de talent, mais par manque de méthode au moment de vendre.</p>
+          <p class="founder-txt">Le live de vente est l'outil le plus puissant et le plus sous-exploité du secteur. Bien structuré, bien animé, il convertit une communauté en clients en quelques heures. C'est exactement ce que je construis avec toi.</p>
+          <p class="founder-txt">Mon engagement est simple : <strong style="color: var(--blanc);">je ne suis rémunérée que sur les ventes générées.</strong> Pas de forfait. Pas de promesse vague. Que des résultats mesurables.</p>
+          <div class="founder-sig">
+            <span class="sig-name">Amandine</span>
+            <span class="sig-role">Fondatrice · Duclos Agency · Bertrange, Luxembourg</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -695,20 +885,24 @@
         </div>
 
         <div class="reveal">
-          <form class="form-grid" id="form-cand">
+          <form class="form-grid" id="form-cand" action="https://formspree.io/f/REMPLACER_PAR_TON_ENDPOINT" method="POST">
             <div class="form-row-2">
               <div class="f-group">
                 <label class="f-label">Prénom</label>
-                <input type="text" class="f-input" placeholder="Léa" required>
+                <input type="text" name="prenom" class="f-input" placeholder="Léa" required>
               </div>
               <div class="f-group">
                 <label class="f-label">Compte Instagram</label>
-                <input type="text" class="f-input" placeholder="@toncompte" required>
+                <input type="text" name="instagram" class="f-input" placeholder="@toncompte" required>
               </div>
             </div>
             <div class="f-group">
+              <label class="f-label">Email</label>
+              <input type="email" name="email" class="f-input" placeholder="ton@email.com" required>
+            </div>
+            <div class="f-group">
               <label class="f-label">Taille de ton audience</label>
-              <select class="f-select" required>
+              <select name="audience" class="f-select" required>
                 <option value="" disabled selected>Sélectionne une tranche</option>
                 <option>20 000 – 50 000 abonnés</option>
                 <option>50 000 – 100 000 abonnés</option>
@@ -718,7 +912,7 @@
             </div>
             <div class="f-group">
               <label class="f-label">Ton produit digital</label>
-              <select class="f-select" required>
+              <select name="produit" class="f-select" required>
                 <option value="" disabled selected>Quel type de produit ?</option>
                 <option>Formation en ligne</option>
                 <option>Programme de coaching</option>
@@ -728,7 +922,7 @@
             </div>
             <div class="f-group">
               <label class="f-label">Ton objectif principal</label>
-              <textarea class="f-textarea" placeholder="Ex : Je veux générer des ventes sur mon prochain lancement via un live Instagram..." required></textarea>
+              <textarea name="objectif" class="f-textarea" placeholder="Ex : Je veux générer des ventes sur mon prochain lancement via un live Instagram..." required></textarea>
             </div>
             <button type="submit" class="btn-submit">
               Envoyer ma candidature <span>→</span>
@@ -748,12 +942,16 @@
 
   <!-- ════════════ FOOTER ════════════ -->
   <footer>
-    <img src="images/logo-blanc.png" alt="Duclos Agency" class="f-logo-img">
-    <ul class="f-links">
-      <li><a href="https://instagram.com/duclosagency" target="_blank" rel="noopener">@duclosagency</a></li>
-      <li><a href="#candidature">Contact</a></li>
-    </ul>
-    <span class="f-copy">© 2026 Duclos Agency</span>
+    <div class="f-main">
+      <img src="images/logo-blanc.png" alt="Duclos Agency" class="f-logo-img" loading="lazy">
+      <ul class="f-links">
+        <li><a href="https://instagram.com/duclosagency" target="_blank" rel="noopener">@duclosagency</a></li>
+        <li><a href="mailto:contact@duclosagency.com">Contact</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="confidentialite.html">Confidentialité</a></li>
+      </ul>
+    </div>
+    <span class="f-copy">© 2026 Duclos Agency · Tous droits réservés</span>
   </footer>
 
   <script>
@@ -796,16 +994,37 @@
       btn.addEventListener('click', () => {
         const item   = btn.parentElement;
         const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
 
     // ── Form ──
-    document.getElementById('form-cand').addEventListener('submit', e => {
+    document.getElementById('form-cand').addEventListener('submit', async e => {
       e.preventDefault();
-      document.getElementById('form-cand').style.display = 'none';
-      document.getElementById('form-ok').style.display   = 'block';
+      const form = e.target;
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-ok').style.display = 'block';
+        } else {
+          alert('Une erreur est survenue. Réessaie ou contacte @duclosagency sur Instagram.');
+        }
+      } catch (err) {
+        alert('Connexion impossible. Réessaie ou contacte @duclosagency sur Instagram.');
+      }
     });
 
     // ── Scroll reveal ──
