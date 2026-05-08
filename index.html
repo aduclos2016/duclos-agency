@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duclos Agency — Transforme ton audience en chiffre d'affaires</title>
   <meta name="description" content="Duclos Agency transforme l'audience des infopreneurs et influenceurs en chiffre d'affaires via des lives et webinaires de vente. 100% à la performance.">
+  <!-- Sécurité -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon-180.png">
@@ -886,19 +891,22 @@
 
         <div class="reveal">
           <form class="form-grid" id="form-cand" action="https://formspree.io/f/REMPLACER_PAR_TON_ENDPOINT" method="POST">
+            <!-- Honeypot anti-spam : invisible pour les humains, piège pour les bots -->
+            <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Nouvelle candidature Duclos Agency">
             <div class="form-row-2">
               <div class="f-group">
                 <label class="f-label">Prénom</label>
-                <input type="text" name="prenom" class="f-input" placeholder="Léa" required>
+                <input type="text" name="prenom" class="f-input" placeholder="Léa" required autocomplete="given-name">
               </div>
               <div class="f-group">
                 <label class="f-label">Compte Instagram</label>
-                <input type="text" name="instagram" class="f-input" placeholder="@toncompte" required>
+                <input type="text" name="instagram" class="f-input" placeholder="@toncompte" required autocomplete="off">
               </div>
             </div>
             <div class="f-group">
               <label class="f-label">Email</label>
-              <input type="email" name="email" class="f-input" placeholder="ton@email.com" required>
+              <input type="email" name="email" class="f-input" placeholder="ton@email.com" required autocomplete="email">
             </div>
             <div class="f-group">
               <label class="f-label">Taille de ton audience</label>
@@ -945,7 +953,7 @@
     <div class="f-main">
       <img src="images/logo-blanc.png" alt="Duclos Agency" class="f-logo-img" loading="lazy">
       <ul class="f-links">
-        <li><a href="https://instagram.com/duclosagency" target="_blank" rel="noopener">@duclosagency</a></li>
+        <li><a href="https://instagram.com/duclosagency" target="_blank" rel="noopener noreferrer">@duclosagency</a></li>
         <li><a href="mailto:contact@duclosagency.com">Contact</a></li>
         <li><a href="mentions-legales.html">Mentions légales</a></li>
         <li><a href="confidentialite.html">Confidentialité</a></li>
