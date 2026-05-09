@@ -899,16 +899,16 @@
             <div class="form-row-2">
               <div class="f-group">
                 <label class="f-label">Prénom</label>
-                <input type="text" name="prenom" class="f-input" placeholder="Léa" required autocomplete="given-name">
+                <input type="text" name="prenom" class="f-input" placeholder="Léa" required autocomplete="given-name" maxlength="60">
               </div>
               <div class="f-group">
                 <label class="f-label">Compte Instagram</label>
-                <input type="text" name="instagram" class="f-input" placeholder="@toncompte" required autocomplete="off">
+                <input type="text" name="instagram" class="f-input" placeholder="@toncompte" required autocomplete="off" maxlength="60">
               </div>
             </div>
             <div class="f-group">
               <label class="f-label">Email</label>
-              <input type="email" name="email" class="f-input" placeholder="ton@email.com" required autocomplete="email">
+              <input type="email" name="email" class="f-input" placeholder="ton@email.com" required autocomplete="email" maxlength="120">
             </div>
             <div class="f-group">
               <label class="f-label">Taille de ton audience</label>
@@ -932,7 +932,7 @@
             </div>
             <div class="f-group">
               <label class="f-label">Ton objectif principal</label>
-              <textarea name="objectif" class="f-textarea" placeholder="Ex : Je veux générer des ventes sur mon prochain lancement via un live Instagram..." required></textarea>
+              <textarea name="objectif" class="f-textarea" placeholder="Ex : Je veux générer des ventes sur mon prochain lancement via un live Instagram..." required maxlength="1000"></textarea>
             </div>
             <button type="submit" class="btn-submit">
               Envoyer ma candidature <span>→</span>
@@ -1019,6 +1019,19 @@
     document.getElementById('form-cand').addEventListener('submit', async e => {
       e.preventDefault();
       const form = e.target;
+      const btn = form.querySelector('.btn-submit');
+
+      // Rate limiting : 1 soumission toutes les 5 minutes
+      const lastSubmit = parseInt(localStorage.getItem('da_last_submit') || '0');
+      const now = Date.now();
+      if (now - lastSubmit < 5 * 60 * 1000) {
+        alert('Tu as déjà envoyé une candidature récemment. Réessaie dans quelques minutes.');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Envoi en cours…';
+
       const data = new FormData(form);
       try {
         const res = await fetch(form.action, {
@@ -1027,13 +1040,18 @@
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
+          localStorage.setItem('da_last_submit', now.toString());
           form.style.display = 'none';
           document.getElementById('form-ok').style.display = 'block';
         } else {
           alert('Une erreur est survenue. Réessaie ou contacte @duclosagency sur Instagram.');
+          btn.disabled = false;
+          btn.innerHTML = 'Envoyer ma candidature <span>→</span>';
         }
       } catch (err) {
         alert('Connexion impossible. Réessaie ou contacte @duclosagency sur Instagram.');
+        btn.disabled = false;
+        btn.innerHTML = 'Envoyer ma candidature <span>→</span>';
       }
     });
 
